@@ -9,7 +9,7 @@ interface GifImage {
   title: string;
 }
 
-// Define the response type from the API
+
 interface GifApiResponse {
   data: GifImage[];
 }
