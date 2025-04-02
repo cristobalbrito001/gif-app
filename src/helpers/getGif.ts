@@ -15,7 +15,7 @@ interface GifApiResponse {
 }
 
 const getGifs = async (category: string): Promise<GifImage[]> => {
-  const Url = `http://api.giphy.com/v1/gifs/search?api_key=WTSJx6f4d6gfal8TRKVDYtd6jjmHJk0X&q=${category}&limit=20`;
+  const Url = `https://api.giphy.com/v1/gifs/search?api_key=WTSJx6f4d6gfal8TRKVDYtd6jjmHJk0X&q=${category}&limit=20`;
   const response = await fetch(Url);
   const { data }: GifApiResponse = await response.json();
 

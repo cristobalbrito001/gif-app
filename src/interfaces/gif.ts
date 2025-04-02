@@ -1,8 +1,16 @@
-interface gif{
-id:string,
-Url: string,
-tittle: string
-}
+interface OriginalImage {
+    url: string;
+  }
+  
+  interface ImageType {
+    original: OriginalImage;
+  }
+  
+  interface gif {
+    id: string;
+    images: ImageType;
+    title: string;
+  }
 export type{
     gif
 }
