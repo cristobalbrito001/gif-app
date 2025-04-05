@@ -1,4 +1,4 @@
-import { useState,FC, FormEvent, ChangeEvent }   from "react";
+import React,{ useState,FC, FormEvent, ChangeEvent }   from "react";
 
 interface AddCategoryProps {
     onNewCategorie: (category: string) => void;
@@ -20,7 +20,7 @@ const AddCategory :FC<AddCategoryProps> = ({onNewCategorie})=>{
         setInputValue('')
     }
    return( 
-    <form onSubmit={  onSubmit }>
+    <form onSubmit={  onSubmit } aria-label="form">
         <h3>
             <input
                 type="text"

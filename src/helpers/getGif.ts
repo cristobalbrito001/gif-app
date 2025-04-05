@@ -1,4 +1,4 @@
-
+import 'whatwg-fetch' 
 interface GifImage {
   id: string;
   images: {
@@ -19,8 +19,8 @@ const getGifs = async (category: string): Promise<GifImage[]> => {
   const response = await fetch(Url);
   const { data }: GifApiResponse = await response.json();
 
-  // Return the correct shape of objects matching the GifImage type
-  const gifs = data.map((img) => ({
+
+  const gifs: GifImage[] = data.map((img) => ({
     id: img.id,
     images: {
       original: {
@@ -34,4 +34,4 @@ const getGifs = async (category: string): Promise<GifImage[]> => {
 };
 
 export { getGifs };
-export type { GifImage };
+export type { GifImage, GifApiResponse };

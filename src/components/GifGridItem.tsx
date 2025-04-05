@@ -1,4 +1,5 @@
 import { gif } from '../interfaces/gif'
+import React from 'react'
 const GifItem =({images  ,title}:gif) =>{
     console.log(images)
     return(
